@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniMart | Online Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Mini<span>Mart</span></a>
+    <p class="header-note">Little things. Better living.</p>
+    <a href="#cart-section" class="cart-link">
+      🛒 Cart <span id="cart-count">0</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">WELCOME TO MINIMART</p>
+      <h1>Find your everyday favourites.</h1>
+      <p>Simple essentials for your home, desk and daily life.</p>
+    </section>
+
+    <section class="shop-section">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>Shop Products</h2>
+        </div>
+        <label class="visually-hidden" for="category">Filter products</label>
+        <select id="category">
+          <option value="All">All Products</option>
+          <option value="Stationery">Stationery</option>
+          <option value="Home">Home</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Lifestyle">Lifestyle</option>
+        </select>
+      </div>
+
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <section id="cart-section" class="cart-section">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">YOUR SELECTION</p>
+          <h2>Shopping Cart</h2>
+        </div>
+        <span id="cart-summary-count" class="item-label">0 items</span>
+      </div>
+
+      <div id="cart-items"></div>
+
+      <div id="cart-totals" class="cart-totals" hidden>
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="subtotal">₹0</span>
+        </div>
+        <div class="total-row">
+          <span>Delivery</span>
+          <span id="delivery">₹0</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Total</span>
+          <span id="total">₹0</span>
+        </div>
+        <button id="checkout-button" class="checkout-button">
+          Proceed to Checkout
+        </button>
+        <p class="delivery-note">
+          Free delivery on orders of ₹500 or more.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 MiniMart — Student demonstration project.</p>
+    <p>No real payments are collected on this website.</p>
+  </footer>
+
+  <dialog id="checkout-dialog" class="checkout-dialog">
+    <div class="dialog-content">
+      <div class="success-icon">✓</div>
+      <p class="eyebrow">DEMO CHECKOUT</p>
+      <h2>Order Summary</h2>
+      <p class="dialog-note">
+        This is a practice checkout preview. No payment will be taken.
+      </p>
+      <div id="order-summary"></div>
+      <div class="total-row grand-total">
+        <span>Order Total</span>
+        <span id="order-total">₹0</span>
+      </div>
+      <button id="place-order" class="checkout-button">
+        Confirm Demo Order
+      </button>
+      <button id="close-dialog" class="cancel-button">
+        Continue Shopping
+      </button>
+    </div>
+  </dialog>
+
+  <dialog id="confirmation-dialog" class="checkout-dialog">
+    <div class="dialog-content">
+      <div class="success-icon">✓</div>
+      <h2>Demo Order Complete!</h2>
+      <p class="dialog-note">
+        Your sample order has been confirmed. This is not a real purchase.
+      </p>
+      <button id="finish-order" class="checkout-button">
+        Back to Store
+      </button>
+    </div>
+  </dialog>
+</body>
+</html>
